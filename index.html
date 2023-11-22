@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média aritmética</title>
+</head>
+<style>
+   body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  min-height: 200px;
+  color: white ;
+  background-color: midnightblue;
+  background-size: 80vh;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  height: 100%
+  
+}
+
+h2 {
+  text-align: center;
+  color: rgb(255, 166, 0);
+}
+
+input {
+  margin: 8px;
+  padding: 6px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+button {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px;
+}
+
+#show {
+  color: rgb(255, 166, 0);
+  font-size: 30px;
+}
+
+</style>
+<body>
+    <h1>Tenha sua Média Aritmética</h1>
+    <h2>Insira os valores nos espaços abaixo:</h2> <br>
+    <div class="container">
+      <input type="number" id="n1"><br>
+      <input type="number" id="n2"><br>
+      <input type="number" id="n3"><br>
+      <input type="number" id="n4"><br>
+      <input type="number" id="n5"><br>
+   
+     <button type="submit" onclick="Calcular()">Resultado</button> 
+    </div>
+
+    <h2 id="show"></h2>
+
+</body>
+
+<script>
+    function Calcular() {
+        let n1 = parseFloat(document.getElementById("n1").value);
+        let n2 = parseFloat(document.getElementById("n2").value);
+        let n3 = parseFloat(document.getElementById("n3").value);
+        let n4 = parseFloat(document.getElementById("n4").value);
+        let n5 = parseFloat(document.getElementById("n5").value);
+
+        let media =(((n1) + (n2) + (n3) + (n4) + (n5)) / 5).toFixed(1)
+        document.getElementById("show").innerHTML = "A média aritmética é: " +  media;
+
+
+    }
+
+</script>
+
+</html>
